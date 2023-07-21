@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D02F6A5A"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/days"
+        android:layout_width="368dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="How much Days do you need a Ticket"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/rides"
+        android:layout_width="268dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="How many rides you need"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/days"
+        app:layout_constraintStart_toStartOf="@+id/days"
+        app:layout_constraintTop_toBottomOf="@+id/days" />
+
+    <EditText
+        android:id="@+id/zones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="How much Zones?"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/rides"
+        app:layout_constraintStart_toStartOf="@+id/rides"
+        app:layout_constraintTop_toBottomOf="@+id/rides" />
+
+    <CheckBox
+        android:id="@+id/sparcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="You have a SparCard?"
+        app:layout_constraintEnd_toEndOf="@+id/zones"
+        app:layout_constraintStart_toStartOf="@+id/zones"
+        app:layout_constraintTop_toBottomOf="@+id/zones" />
+
+    <RadioGroup
+        android:id="@+id/destinations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/sparcard"
+        app:layout_constraintStart_toStartOf="@+id/sparcard"
+        app:layout_constraintTop_toBottomOf="@+id/sparcard">
+
+        <RadioButton
+            android:id="@+id/sylt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sylt" />
+
+        <RadioButton
+            android:id="@+id/nyc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NYC" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/get_best_fare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Get Best Fare"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destinations"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/best_fare"
+        android:layout_width="339dp"
+        android:layout_height="271dp"
+        android:layout_marginTop="15dp"
+        android:hint="The Best Fare"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/get_best_fare"
+        app:layout_constraintStart_toStartOf="@+id/get_best_fare"
+        app:layout_constraintTop_toBottomOf="@+id/get_best_fare" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
